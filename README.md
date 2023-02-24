@@ -25,15 +25,15 @@ docker pull docker pull ghcr.io/openformation/pgsnap:latest
 | S3_BUCKET_NAME    | The name of the storage bucket.                                                                     | Yes          |                  |
 | S3_ACCESS_KEY     | The access key for accessing the storage bucket.                                                    | Yes          |                  |
 | S3_SECRET_KEY     | The secret key for accessing the storage bucket.                                                    | Yes          |                  |
-| S3_HOST           | The API host of the S3-compatible storage service.                                                  | No           | s3.amazonaws.com |
-| S3_REGION         | The region of the S3-compatible storage engine.                                                     | No           | eu-central-1     |
+| S3_HOST           | The API host of the S3-compatible storage service.                                                  | No           | `s3.amazonaws.com` |
+| S3_REGION         | The region of the S3-compatible storage engine.                                                     | No           | `eu-central-1`     |
 | SENTRY_DSN        | Sentry DSN. Required when you want to use [Cron Monitoring](https://docs.sentry.io/product/crons/). | No           |                  |
 | SENTRY_MONITOR_ID | The Sentry Cron Monitoring ID.                                                                                                    | No           |                  |
 | SENTRY_ORGANIZATION | The name of your Sentry organization.                                                                                                    | No           |                  |
 
 ## Utilizing Kubernetes CronJob
 
-`pgsnap` can be easily run as a [Kubernetes CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/). The following example runs `pgsnap` every night at 2am (timezone: `Europe/Berlin ). The environment variables are stored in a [Kubernetes Secret](https://kubernetes.io/docs/concepts/configuration/secret/):
+`pgsnap` can be easily run as a [Kubernetes CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/). The following example runs `pgsnap` every night at 2am (timezone: `Europe/Berlin`). The environment variables are stored in a [Kubernetes Secret](https://kubernetes.io/docs/concepts/configuration/secret/):
 
 ```yaml
 apiVersion: batch/v1
