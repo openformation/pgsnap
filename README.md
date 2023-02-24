@@ -31,7 +31,7 @@ docker pull docker pull ghcr.io/openformation/pgsnap:latest
 | `SENTRY_MONITOR_ID` | The Sentry Cron Monitoring ID.                                                                                                    | No           |                  |
 | `SENTRY_ORGANIZATION` | The name of your Sentry organization.                                                                                                    | No           |                  |
 
-## Utilizing Kubernetes CronJob
+## Using as a Kubernetes CronJob
 
 `pgsnap` can be easily run as a [Kubernetes CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/). The following example runs `pgsnap` every night at 2am (timezone: `Europe/Berlin`). The environment variables are stored in a [Kubernetes Secret](https://kubernetes.io/docs/concepts/configuration/secret/):
 
