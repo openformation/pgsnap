@@ -49,7 +49,7 @@ spec:
         spec:
           containers:
           - name: pgsnap
-            image: ghcr.io/openformation/pgsnap:0.1.3
+            image: ghcr.io/openformation/pgsnap:1.0.0
             envFrom:
             - secretRef:
                 name: pgsnap-env-variables
